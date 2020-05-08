@@ -19,6 +19,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -258,6 +259,19 @@ class MainActivity : AppCompatActivity() {
                 open(Uri.parse(source))
                 return true
             }
+            R.id.theme_dark -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                return true
+            }
+            R.id.theme_light -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                return true
+            }
+            R.id.theme_system -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                return true
+            }
+
             else -> return super.onOptionsItemSelected(item)
         }
     }

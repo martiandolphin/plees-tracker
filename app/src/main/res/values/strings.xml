@@ -38,4 +38,8 @@
     <string name="endicon">endIcon</string>
     <string name="sleepicon">sleepIcon</string>
     <string name="sleep_details">Sleep Details</string>
+    <string name="theme_system">System Theme</string>
+    <string name="theme_dark">Dark Theme</string>
+    <string name="theme_light">Light Theme</string>
+
 </resources>
